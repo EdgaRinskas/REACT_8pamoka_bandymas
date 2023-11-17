@@ -1,0 +1,19 @@
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Set a background color for the body */
+
+  /* Add styles for the full-width navigation bar */
+  overflow: hidden; /* Hide horizontal scrollbar caused by full-width navigation bar */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff; /* Set a background color for the content container */
+  padding: 20px; /* Add some padding for better readability */
+}
+
+/* Add more global styles as needed */

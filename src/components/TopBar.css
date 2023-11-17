@@ -1,0 +1,26 @@
+/* src/components/TopBar.css */
+.topbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  /* Add the "full-width" class styles */
+  .full-width {
+    width: 100%;
+  }
+  
+  .topbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .topbar li {
+    margin-right: 10px;
+  }
+  
+  .topbar a {
+    text-decoration: none;
+    color: white;
+  }
+  
