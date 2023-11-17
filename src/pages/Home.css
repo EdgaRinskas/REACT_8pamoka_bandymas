@@ -1,0 +1,19 @@
+/* src/pages/Home.css */
+.home-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-container h2 {
+    color: #333;
+  }
+  
+  .home-container p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  

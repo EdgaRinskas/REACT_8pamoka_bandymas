@@ -3,17 +3,23 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0; /* Set a background color for the body */
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 100% viewport height */
+}
 
-  /* Add styles for the full-width navigation bar */
-  overflow: hidden; /* Hide horizontal scrollbar caused by full-width navigation bar */
+#root {
+  text-align: center; /* Align text within the root container */
 }
 
 .container {
   max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff; /* Set a background color for the content container */
-  padding: 20px; /* Add some padding for better readability */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Add more global styles as needed */

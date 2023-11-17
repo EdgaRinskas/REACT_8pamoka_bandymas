@@ -1,0 +1,12 @@
+/* src/pages/Users.css */
+.users-container {
+    padding-top: 60px; /* Adjust this value based on your top bar's height */
+    background-color: white; /* Set background color to white */
+    color: black; /* Set text color to black */
+    /* Other styles for the Users component */
+  }
+  
+  .user-card {
+    /* Styles for individual user cards */
+  }
+  

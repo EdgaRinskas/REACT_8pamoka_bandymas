@@ -1,0 +1,12 @@
+/* src/pages/Todos.css */
+.todos-container {
+    padding-top: 60px; /* Adjust this value based on your top bar's height */
+    background-color: white; /* Set background color to white */
+    color: black; /* Set text color to black */
+    /* Other styles for the Todos component */
+  }
+  
+  .todo-table {
+    /* Styles for the todo table */
+  }
+  

@@ -1,8 +1,8 @@
 // src/pages/Users.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import UserCard from '../components/UserCard';
+import './Users.css'; // Import the CSS file
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -21,13 +21,11 @@ const Users = () => {
   }, []);
 
   return (
-    <div>
+    <div className="users-container">
       <h2>Users</h2>
       <div>
         {users.map((user) => (
-          <Link key={user.id} to={`/users/${user.id}`}>
-            <UserCard user={user} />
-          </Link>
+          <UserCard key={user.id} user={user} />
         ))}
       </div>
     </div>

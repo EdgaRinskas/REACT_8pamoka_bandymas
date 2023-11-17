@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TodoTable from '../components/TodoTable';
-
+import './Todos.css' 
 const Todos = () => {
   const [todos, setTodos] = useState([]);
 
