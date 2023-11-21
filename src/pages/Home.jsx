@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
-import React, { useContext } from 'react';
-import { useTheme } from '../ThemeContext';
-import './Home.css'; // Import the CSS file
+import React from 'react';
+import { useTheme } from '../ThemeContext'; // Add this line
+import './Home.css';
 
 const Home = () => {
   const { theme } = useTheme();

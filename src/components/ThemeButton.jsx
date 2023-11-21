@@ -1,7 +1,6 @@
 // src/components/ThemeButton.jsx
 import React from 'react';
-import { useTheme } from '../ThemeContext';
-import { themes } from '../ThemeContext'; // Add this line to import themes
+import { useTheme, themes } from '../ThemeContext'; // Add this line
 
 const ThemeButton = () => {
   const { theme, toggleTheme, setDarkTheme, setLightTheme } = useTheme();
@@ -14,9 +13,9 @@ const ThemeButton = () => {
   return (
     <button className="themeButton" onClick={handleButtonClick}>
       {theme === themes.light ? (
-        <i className={`ci/${theme.sunIcon}`} /> // Assuming 'ci' is the correct class for your icons
+        <i className={`ci/${theme.sunIcon}`} />
       ) : (
-        <i className={`fa/${theme.moonIcon}`} /> // Assuming 'fa' is the correct class for your icons
+        <i className={`fa/${theme.moonIcon}`} />
       )}
     </button>
   );

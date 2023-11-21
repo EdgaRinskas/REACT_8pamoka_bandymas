@@ -1,11 +1,13 @@
 // src/pages/Users.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import UserCard from '../components/UserCard';
-import './Users.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
+import { useTheme } from '../ThemeContext'; // Add this line
+import './Users.css';
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const { theme } = useTheme(); // Add this line
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -13,7 +15,7 @@ const Users = () => {
         const response = await axios.get('https://jsonplaceholder.typicode.com/users');
         setUsers(response.data);
       } catch (error) {
-        console.error('Error fetching user data:', error);
+        console.error('Error fetching users:', error);
       }
     };
 
@@ -21,13 +23,15 @@ const Users = () => {
   }, []);
 
   return (
-    <div className="users-container">
-      <h2>Users</h2>
-      <div>
+    <div className="users-container" style={{ color: theme.textColor, backgroundColor: theme.backgroundColor }}>
+      <h1>Users</h1>
+      <ul>
         {users.map((user) => (
-          <UserCard key={user.id} user={user} />
+          <li key={user.id}>
+            <Link to={`/users/${user.id}`}>{user.name}</Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

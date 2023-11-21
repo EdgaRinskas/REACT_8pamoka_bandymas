@@ -1,6 +1,5 @@
-// ThemeContext.jsx
-import React, { createContext, useContext, useState } from 'react';
-import { FaRegMoon, FaRegSun } from 'react-icons/fa';
+// src/ThemeContext.js
+import { createContext, useContext, useState } from 'react';
 
 export const themes = {
   light: {
@@ -13,8 +12,8 @@ export const themes = {
     homeContainerTextColor: 'gray',
     homeContainerBackgroundColor: 'black',
     footerBackgroundColor: 'gray',
-    moonIcon: <FaRegMoon size={20} color="gray" />,
-    sunIcon: <FaRegSun size={20} color="yellow" />,
+    moonIcon: 'FaRegMoon', // Assuming 'FaRegMoon' is the correct class for Font Awesome moon icon
+    sunIcon: 'FaRegSun', // Assuming 'FaRegSun' is the correct class for Font Awesome sun icon
   },
   dark: {
     textColor: 'white',
@@ -26,8 +25,8 @@ export const themes = {
     homeContainerTextColor: 'gray',
     homeContainerBackgroundColor: 'black',
     footerBackgroundColor: 'gray',
-    moonIcon: <FaRegMoon size={20} color="gray" />,
-    sunIcon: <FaRegSun size={20} color="yellow" />,
+    moonIcon: 'FaRegMoon',
+    sunIcon: 'FaRegSun',
   },
 };
 

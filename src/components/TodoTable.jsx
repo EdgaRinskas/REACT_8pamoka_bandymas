@@ -1,9 +1,14 @@
+// src/components/TodoTable.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from '../ThemeContext'; // Add this line
+import './TodoTable.css';
 
 const TodoTable = ({ todos }) => {
+  const { theme } = useTheme(); // Add this line
+
   return (
-    <table>
+    <table className="todo-table" style={{ color: theme.textColor, backgroundColor: theme.backgroundColor }}>
       <thead>
         <tr>
           <th>ID</th>

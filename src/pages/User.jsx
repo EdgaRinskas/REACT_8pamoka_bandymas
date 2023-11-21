@@ -1,34 +1,35 @@
 // src/pages/User.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import { useTheme } from '../ThemeContext'; // Add this line
+import './User.css';
 
-const User = ({ match }) => {
-  const [user, setUser] = useState(null);
-  const userId = match.params.id;
+const User = () => {
+  const { id } = useParams();
+  const [user, setUser] = useState({});
+  const { theme } = useTheme(); // Add this line
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`);
+        const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
         setUser(response.data);
       } catch (error) {
-        console.error('Error fetching user data:', error);
+        console.error('Error fetching user:', error);
       }
     };
 
     fetchUser();
-  }, [userId]);
+  }, [id]);
 
   return (
-    <div>
-      <h2>User Details</h2>
-      {user && (
-        <div>
-          <p>Name: {user.name}</p>
-          <p>Email: {user.email}</p>
-          {/* Add more user details as needed */}
-        </div>
-      )}
+    <div className="user-container" style={{ color: theme.textColor, backgroundColor: theme.backgroundColor }}>
+      <h1>User Details</h1>
+      <p>User ID: {id}</p>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
+      {/* Additional user details go here */}
     </div>
   );
 };

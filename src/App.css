@@ -1,25 +1,48 @@
 /* src/App.css */
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* 100% viewport height */
+  color: #333;
 }
 
-#root {
-  text-align: center; /* Align text within the root container */
+.topbar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
 }
 
-.container {
-  max-width: 800px;
-  background-color: #fff;
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.home-container {
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add more global styles as needed */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.themeButton {
+  width: 100px;
+  height: 50px;
+  align: top-left;
+  color: white;
+  outline: none;
+}
+
+.themeButton:hover {
+  cursor: pointer;
+}
+
+/* Add more styles as needed */
