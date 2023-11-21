@@ -1,5 +1,5 @@
-// src/components/TodoTable.jsx
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TodoTable = ({ todos }) => {
   return (
@@ -12,7 +12,7 @@ const TodoTable = ({ todos }) => {
         </tr>
       </thead>
       <tbody>
-        {todos.map(todo => (
+        {todos.map((todo) => (
           <tr key={todo.id}>
             <td>{todo.id}</td>
             <td>{todo.title}</td>
@@ -22,6 +22,16 @@ const TodoTable = ({ todos }) => {
       </tbody>
     </table>
   );
+};
+
+TodoTable.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      // Add more prop types as needed
+    })
+  ).isRequired,
 };
 
 export default TodoTable;

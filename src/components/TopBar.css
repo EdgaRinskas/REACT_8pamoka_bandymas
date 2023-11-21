@@ -1,6 +1,5 @@
 /* src/components/TopBar.css */
 .topbar {
-  background-color: #333;
   padding: 10px;
   position: fixed;
   top: 0;
@@ -21,5 +20,32 @@
 
 .topbar a {
   text-decoration: none;
-  color: white;
+}
+
+.themeButton {
+  width: 100px;
+  height: 50px;
+  text-align: left;
+  background-color: ${(theme) => theme.buttonColor};
+  color: ${(theme) => theme.textColor};
+  outline: ${(theme) => theme.buttonOutline};
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add the styles for dark mode */
+.dark-mode .topbar {
+  background-color: gray;
+}
+
+.dark-mode .home-container {
+  color: gray;
+  background-color: black;
+}
+
+.dark-mode .footer {
+  background-color: gray;
 }
